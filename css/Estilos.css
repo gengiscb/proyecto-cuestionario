@@ -1,0 +1,280 @@
+/* CSS Document */
+
+.banner{
+    width:800px;
+    height: 120px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 80px;
+    text-align:center;
+    vertical-align:central;
+    background-color:#9CF;
+    -webkit-border-radius: 1em 1em 1em 1em;
+    -moz-border-radius: 1em 1em 1em 1em;
+    border-radius: 1em 1em 1em 1em;
+    -webkit-box-shadow:#666 3px 3px 3px 3px;
+    -moz-box-shadow:#666 3px 3px 3px 3px;
+    box-shadow:#666 3px 3px 3px 3px;
+    background: -webkit-gradient(
+        linear,
+        center bottom,
+        center top,
+        from(rgba(0, 0, 0, .1)),
+        to(rgba(255, 255, 255, .1))
+        );
+    background: -moz-linear-gradient(
+        center top,
+        rgba(255, 255, 255, .1) 0%,
+        rgba(0, 0, 0, .1) 100%
+        );
+
+    background-color:#9CF;
+}
+
+.banner.encabezado.mini_perfil a{
+    text-decoration: none;
+    color:black;
+}
+.contenido{
+    width:800px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.marcologin{
+    background: -webkit-gradient(
+        linear,
+        center bottom,
+        center top,
+        from(rgba(0, 0, 0, .1)),
+        to(rgba(255, 255, 255, .1))
+        );
+    background: -moz-linear-gradient(
+        center top,
+        rgba(255, 255, 255, .1) 0%,
+        rgba(0, 0, 0, .1) 100%
+        );
+
+    background-color:#9CF;
+    margin-top:20px;
+    width:250px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    border:#9CF solid 1px;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    border-radius: 2px 2px 2px 2px;
+    -webkit-box-shadow:#666 3px 3px 3px 3px;
+    -moz-box-shadow:#666 3px 3px 3px 3px;
+    box-shadow:#666 3px 3px 3px 3px;
+}
+
+fieldset{
+    text-align: center;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    border-radius: 2px 2px 2px 2px;
+}
+/*table{
+    margin-left: auto;
+    margin-right: auto;
+}*/
+
+label{
+/*    padding-top: 10px;*/
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    line-height: 18px;
+    vertical-align: middle;
+    height: 31px;
+    color:#404040;
+    
+}
+
+
+
+.contenido fieldset{
+    width: 210px;
+    margin:50px auto 0 auto;
+}
+
+div .error{
+    color:#cc0000;
+    font-size: 14px;
+}
+
+
+fieldset h1{
+    padding-top: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:20px;
+    color:#404040;
+    vertical-align: middle;
+}
+
+fieldset a{
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+#menuProfesor{
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 800px;
+}
+
+.contenedorBoton{
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    /*text-align: center;*/
+}
+
+.botonMenu{
+    width: 200px;
+    height: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*borde*/
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    border: none;
+    /*sombreado*/
+    -webkit-box-shadow:#666 1px 1px 1px 1px;
+    -moz-box-shadow:#666 1px 1px 1px 1px;
+    box-shadow:#666 1px 1px 1px 1px;
+    /*fondo*/
+    background: -webkit-gradient(
+        linear,
+        center bottom,
+        center top,
+        from(rgba(0, 0, 0, .1)),
+        to(rgba(255, 255, 255, .4))
+        );
+    background: -moz-linear-gradient(
+        center top,
+        rgba(255, 255, 255, .4) 0%,
+        rgba(0, 0, 0, .1) 100%
+        );
+    background-color: #ff3333;
+    /*fuente*/
+    color:#fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 12pt;
+    text-shadow: #000 2px 2px 2px;
+}
+
+.botonMenu:hover{
+    background: -webkit-gradient(
+        linear,
+        center bottom,
+        center top,
+        from(rgba(200,200, 200, .1)),
+        to(rgba(0, 0, 0, .1))
+        );
+    background: -moz-linear-gradient(
+        center top,
+        rgba(0, 0, 0, .1) 0%,
+        rgba(200, 200, 200, .1) 100%
+        );
+    background-color: #ff3333;
+    background-color: #cc0000;
+}
+
+
+.preguntas{
+/*    width: 800px;*/
+    text-align: center;
+    color: #cc0000; 
+    font-size: 25px;
+}
+
+.pregunta{
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 35px;
+}
+/*Formulario*/
+
+input[type=checkbox].css-checkbox {
+    display:none;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+    padding-left:20px;
+    height:15px; 
+    display:  inline-block;
+    line-height:17px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    font-size:15px;
+    vertical-align:middle;
+    cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: 0 -15px;
+}
+
+.css-label{
+    background-image:url(../img/dark-check-green.png);
+}
+
+
+
+
+form .login .rowElem input{
+    width: 20px;
+    margin-bottom: 15px;
+}
+
+#alumnos{
+    background: url(../images/mono.jpg);
+    background-size: 100%;
+}
+
+#profesores{
+    background: url(../images/profesores.jpg);
+    background-size: 100%;
+}
+
+h1{
+    text-align:center;
+    color: #cc0000;
+    margin-top: 50px;
+   
+}
+
+.css-label2{
+    
+    margin-top: 30px;
+    text-align: center;
+    color:  #f3f3f3;
+    margin-left: 60px;
+    font-size: 14px;
+}
+
+.css-label{
+    text-align: left;
+    color:  #f3f3f3;
+}
+
+#activos{
+    margin-top: 100px;
+}
+
+.botonMenu-menu{
+    margin-left: 500px;
+}
+
+ .menuProfesor{
+    text-align: center;
+    font-size: 20px;
+}
