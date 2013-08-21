@@ -79,6 +79,15 @@ class PreguntasDAO extends ConexionGeneral {
             echo $cerror;
         }
     }
+    
+    function obtenerImagen($idPregunta){
+        $conexion = $this->abrirConexion();
+        $sql = "SELECT * FROM preguntas WHERE id=" . $idPregunta . " and estado='activa'";
+        $resultado_peticion = $this->ejecutarConsulta($sql, $conexion);
+        $contenido = mysql_fetch_array($resultado_peticion);
+        $this->cerrarConexion($conexion);
+        return $contenido;
+    }
 
     function obtenerPregunta($idPregunta) {
         $conexion = $this->abrirConexion();

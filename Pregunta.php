@@ -42,7 +42,7 @@ $controladorPregunta->finalizarCuestionario();
                     $_SESSION['numPregunta'] = 0;
                 }
                 if (count($preguntas) <= $_SESSION['numPregunta']) {
-                    echo '<div class= "preguntas">No hay resultados</div>';
+                    echo '<div class= "preguntas">No hay mas preguntas</div>';
                     $_SESSION['numPregunta'] = 0;
                     echo '<div><form action="'.$_SERVER["PHP_SELF"].'" method="post">
                 <input type="submit"class="button button-pill button-primary button-finalizar" name="finalizar" value="Finalizar" />        
@@ -52,7 +52,7 @@ $controladorPregunta->finalizarCuestionario();
                 }
             } else {
                 echo $gestorPlantilla->formCerrarSesion();
-                echo '<div class= "preguntas">No hay resultados</div>';
+                echo '<div class= "preguntas">No hay pregunta activas</div>';
             }
             ?>
         </div>

@@ -36,6 +36,11 @@ class ControladorPreguntas {
             }
         }
     }
+    public function mostrarImagen($idPregunta){
+        $servicioPreguntas = new ServicioPreguntas();
+        $resultado = $servicioPreguntas->mostrarImagen($idPregunta);
+        return $resultado;
+    }
 
     public function mostrarPregunta($idPregunta) {
         $servicioPreguntas = new ServicioPreguntas();

@@ -63,6 +63,15 @@ class ServicioPreguntas {
         $preguntasDAO->desactivaPreguntas();
         $preguntasDAO->eliminarRespuestas();
     }
+    
+    public function mostrarImagen($idPregunta){
+        $preguntasDAO = new PreguntasDAO();
+        $resultado = $preguntasDAO->obtenerImagen($idPregunta);
+        if($resultado !=0){
+            $contenido = $resultado['imagen'];
+            return $contenido;
+        }
+    }
 
     public function mostrarPregunta($idPregunta) {
         $preguntasDAO = new PreguntasDAO();
@@ -70,7 +79,7 @@ class ServicioPreguntas {
         $resultadoHTML = "" + $idPregunta;
         if ($resultado != 0) {
             $respuestas = $preguntasDAO->obtenerRespuestas($idPregunta);
-            $resultadoHTML.="<form action='" . $_SERVER["PHP_SELF"] . "' method='post'><table width='40%'><tr><td colspan='4' align='center'>" . $resultado['materia'] . " Unidad " . $resultado['unidad'] . "</td></tr><tr><td colspan='4' align='center'><img src='#' width='400px' height='300'/></td></tr>";
+            $resultadoHTML.="<form action='" . $_SERVER["PHP_SELF"] . "' method='post'><table width='40%'><tr><td colspan='4' align='center'>" . $resultado['materia'] . " Unidad " . $resultado['unidad'] . "</td></tr><tr><td colspan='4' align='center'><iframe scrolling='no' src='Imagen.php' width='300px' height='300px'></iframe></td></tr>";
             $resultadoHTML.="<input type='hidden' name='idPregunta' value='" . $idPregunta . "' />";
             $resultadoHTML.="<tr><td colspan='4' align='justify'> " . $resultado['descripcion'] . "</td></tr>";
             $resultadoHTML.="<tr><td colspan='4' align='center'>" . $resultado['pregunta'] . "</td></tr>";
