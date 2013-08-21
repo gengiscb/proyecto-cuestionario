@@ -8,10 +8,9 @@ www.amitjakhu.com
 FONTS
 *******************/
 
-@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+
 
 /*******************
-SELECTION STYLING
 *******************/
 
 ::selection {
@@ -50,6 +49,17 @@ body {
 	top: 50%;
 	margin-left: -150px;
 	margin-top: -200px;
+}
+
+#wrapper2 {
+	/* Center wrapper perfectly */
+	width: 300px;
+	height: 400px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -150px;
+	margin-top: -400px;
 }
 
 /*
@@ -92,11 +102,27 @@ body {
 LOGIN FORM
 *******************/
 
-.login-form {
+.login-form{
 	width: 300px;
 	margin: 0 auto;
 	position: relative;
 	z-index:5;
+	
+	background: #f3f3f3;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.registro-form{
+    	width: 600px;
+	margin: 0 auto;
+	position: relative;
+	z-index:5;
+        margin-left: -130px;
 	
 	background: #f3f3f3;
 	border: 1px solid #fff;
@@ -115,6 +141,10 @@ HEADER
 	padding: 40px 30px 30px 30px;
 }
 
+.registro-form .header{
+    padding: 40px 30px 30px 30px;
+}
+
 .login-form .header h1 {
 	font-family: 'Bree Serif', serif;
 	font-weight: 300;
@@ -125,6 +155,15 @@ HEADER
 	margin-bottom: 10px;
 }
 
+.registro-form .header h1{
+    	font-family: 'Bree Serif', serif;
+	font-weight: 300;
+	font-size: 40px;
+	line-height:34px;
+	color: #414848;
+	text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
+	margin-bottom: 10px;
+}
 .login-form .header span {
 	font-size: 11px;
 	line-height: 16px;
@@ -138,6 +177,10 @@ CONTENT
 
 .login-form .content {
 	padding: 0 30px 25px 30px;
+}
+
+.registro-form .content{
+    padding: 0 40px 30px 40px;
 }
 
 /* Input field */
@@ -160,13 +203,56 @@ CONTENT
 	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
 }
 
+.registro-form .content .rowElem .input{
+        width: 250px;
+	padding: 8px 30px;
+	
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	color: #9d9e9e;
+	text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
+	
+	background: #fff;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	
+	box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+	-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+        margin-top: 8px;
+}
+
+ .registro-form .content .unidad{
+    margin-left: 110px;
+}
+.registro-form .content .materia{
+    margin-left: 105px;
+}
+.registro-form .content .descipcion{
+     margin-left: 70px;
+}
+
+.registro-form .content .pregunta{
+     margin-left: 94px;
+}
+
+.registro-form .content .correcta{
+     margin-left: 10px;
+}
 /* Second input field */
 .login-form .content .password, .login-form .content .pass-icon {
 	margin-top: 25px;
 }
 
+
 .login-form .content .input:hover {
 	background: #dfe9ec;
+	color: #414848;
+}
+
+.registro-form .content .rowElem .input:hover{
+    	background: #dfe9ec;
 	color: #414848;
 }
 
@@ -179,6 +265,14 @@ CONTENT
 	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
 }
 
+.registro-form .content .rowElem .input:focus{
+        background: #dfe9ec;
+	color: #414848;
+	
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+}
 .user-icon, .pass-icon {
 	width: 46px;
 	height: 47px;
@@ -229,6 +323,20 @@ FOOTER
 	-webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
 }
 
+.registro-form .footer {
+	padding: 25px 30px 40px 30px;
+	overflow: auto;
+	
+	background: #d4dedf;
+	border-top: 1px solid #fff;
+	
+	box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
+	-moz-box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
+	-webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
+}
+
+
+
 /* Login button */
 .login-form .footer .button2 {
 	float:right;
@@ -250,7 +358,29 @@ FOOTER
 	-webkit-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
 }
 
-.login-form .footer .button2:hover {
+.registro-form .footer .button2 {
+	float:right;
+	padding: 11px 25px;
+	
+	font-family: 'Bree Serif', serif;
+	font-weight: 300;
+	font-size: 18px;
+	color: #fff;
+	text-shadow: 0px 1px 0 rgba(0,0,0,0.25);
+	
+	background: #56c2e1;
+	border: 1px solid #46b3d3;
+	border-radius: 5px;
+	cursor: pointer;
+	
+	box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+	-moz-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+	-webkit-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+}
+
+
+
+.login-form .footer .button2:hover, .registro-form .footer .button2:hover {
 	background: #3f9db8;
 	border: 1px solid rgba(256,256,256,0.75);
 	
@@ -259,7 +389,7 @@ FOOTER
 	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
 }
 
-.login-form .footer .button2:focus {
+.login-form .footer .button2:focus, .registro-form .footer .button2:focus {
 	position: relative;
 	bottom: -1px;
 	
@@ -305,6 +435,11 @@ FOOTER
 
 h4{
    color: #3f9db8;
+   
+}
+
+.titulo h4{
+    margin-left: 35px;
 }
 
 .regresar{
@@ -317,3 +452,4 @@ h4{
     width: 119px;
     background:  #9d9e9e;
 }
+

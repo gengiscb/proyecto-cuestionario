@@ -10,6 +10,7 @@ $controladorVista = new ControladorVistaProfesor();
 $controladorVista->verPreguntas();
 $controladorVista->verPreguntasActivas();
 $controladorVista->iniciarClase();
+$controladorVista->registrarPreguntas();
 $sesion->cerrarSesion();    
 $sesion->filtroSesion();
 ?>
@@ -37,6 +38,9 @@ $sesion->filtroSesion();
                 </div>
                 <div class="contenedorBoton">
                     <input class="botonMenu" type="submit" name="iniciarClase" value="Iniciar clase"></input>
+                </div>
+                <div class="contenedorBoton">
+                    <input class="botonMenu" type="submit" name="registroPreguntas" value="Registro Preguntas"></input>
                 </div>
             </form>
         </div> 

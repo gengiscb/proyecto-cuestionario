@@ -33,6 +33,12 @@ class ControladorVistaProfesor {
             header('Location: Pregunta.php');
         }
     }
+    
+    function registrarPreguntas(){
+        if(isset($_POST['registroPreguntas'])){
+            header('Location: registroPreguntas.php');
+        }
+    }
 
 }
 
