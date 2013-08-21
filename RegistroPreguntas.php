@@ -76,7 +76,7 @@ $agregarPregunta->agregarPregunta();
        
                         <div class="footer">
                             <input type="hidden" name="login" value="login"/>
-                            <input type="submit"  name="btn-sesion" class="button2"  id="acceder" value="Guardar Pregunta"/>
+                            <input type="submit"  name="btn_registrar" class="button2"  id="acceder" value="Guardar Pregunta"/>
                         </div>
                         
                     </form>
