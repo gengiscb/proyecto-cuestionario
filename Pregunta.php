@@ -24,6 +24,7 @@ $controladorPregunta->finalizarCuestionario();
            <link rel="stylesheet" href="css/font-awesome.min.css"></link>
            <link rel="stylesheet" href="css/buttons.css"></link>
            <link rel="stylesheet" href="css/Estilos.css"></link>
+           <link rel="stylesheet" href="css/style.css"></link>
            <!--<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>-->
            <script type="text/javascript" src="js/buttons.js"></script>
            
@@ -62,6 +63,12 @@ $controladorPregunta->finalizarCuestionario();
                 echo $controladorPregunta->mostrarPregunta($idPregunta);
             }
             ?>
+        </div>
+        
+        <div>
+      <?php
+         echo $gestorPlantilla->regresarPagina();
+      ?>
         </div>
     </body>
 </html>

@@ -8,6 +8,7 @@ include_once 'GestorPlantilla.php';
 $listarPreguntas = new ControladorPreguntas();
 $controladorVista = new ControladorVistaProfesor();
 $gestorPlantilla = new GestorPlantilla();
+$gestorPlantilla->regresarPagina();
 $sesion = new Sesion();
 $sesion->filtroSesion();
 $sesion->cerrarSesion();
@@ -20,6 +21,7 @@ $controladorVista->iniciarClase();
            <link rel="stylesheet" href="css/font-awesome.min.css">
            <link rel="stylesheet" href="css/buttons.css">
            <link rel="stylesheet" href="css/Estilos.css">
+           <link rel="stylesheet" href="css/style.css">
         <title>Preguntas Activas</title>
     </head>
     <body id="profesores">
@@ -30,7 +32,14 @@ $controladorVista->iniciarClase();
         <div id="activos">
         <?php
         echo $listarPreguntas->listarPreguntasActivadas();
-        ?>
+      ?>
+       
+        </div>
+       
+        <div>
+      <?php
+         echo $gestorPlantilla->regresarPagina();
+      ?>
         </div>
     </body>
 </html>

@@ -217,6 +217,7 @@ input[type=checkbox].css-checkbox + label.css-label {
     font-size:15px;
     vertical-align:middle;
     cursor:pointer;
+    text-align: left;
 }
 
 input[type=checkbox].css-checkbox:checked + label.css-label {
@@ -278,3 +279,4 @@ h1{
     text-align: center;
     font-size: 20px;
 }
+

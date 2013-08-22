@@ -19,6 +19,13 @@ class GestorPlantilla {
         return $formCerrarSesion;
     }
     
+    public function regresarPagina(){
+        $formRegresar = '<a class="button3" name="btn_regresar"  href="javascript:window.history.back();">&laquo; Volver atr&aacutes</a>';
+        
+        return $formRegresar;
+    }
+
+
     public function estilos(){
         $estilos = '<link href="css/Estilos.css" rel="stylesheet" type="text/css" />';
         return $estilos;

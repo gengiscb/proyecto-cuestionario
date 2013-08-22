@@ -5,6 +5,7 @@ include_once 'ControladorPreguntas.php';
 include_once 'GestorPlantilla.php';
 
 $gestorPlantilla = new GestorPlantilla();
+$gestorPlantilla->regresarPagina();
 $listarPreguntas = new ControladorPreguntas();
 ?>
 
@@ -15,6 +16,7 @@ $listarPreguntas = new ControladorPreguntas();
            <link rel="stylesheet" href="css/font-awesome.min.css">
            <link rel="stylesheet" href="css/buttons.css">
            <link rel="stylesheet" href="css/Estilos.css">
+           <link rel="stylesheet" href="css/style.css">
 
         <?php echo $gestorPlantilla->estilos() ?>
         <title></title>
@@ -31,11 +33,16 @@ $listarPreguntas = new ControladorPreguntas();
                             echo $listarPreguntas->listarPreguntas();
                             $listarPreguntas->redireccionarProfesor();
                             ?>
-                        </form>   
+                        </form> 
+
                     </div>
-                </div>
-            </div>
+
         </div>
+                                   <div>
+                        <?php
+                        echo $gestorPlantilla->regresarPagina();
+                        ?>
+                    </div>                         
     </body>
 </html>
 <? ob_flush(); ?>
