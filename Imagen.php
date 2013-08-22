@@ -3,7 +3,7 @@ include_once 'config.inc.php';
 include_once 'ControladorPreguntas.php';
 $controladorPregunta = new ControladorPreguntas();
 //header('Content-type: image/jpg');
-$image = $controladorPregunta->mostrarImagen(6);
+$image = $controladorPregunta->mostrarImagen($_GET['id']);
 //$picsize =123;
 $img = imagecreatefromstring($image);
 if($img!==FALSE){

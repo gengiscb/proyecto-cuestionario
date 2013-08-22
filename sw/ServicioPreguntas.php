@@ -79,7 +79,7 @@ class ServicioPreguntas {
         $resultadoHTML = "" + $idPregunta;
         if ($resultado != 0) {
             $respuestas = $preguntasDAO->obtenerRespuestas($idPregunta);
-            $resultadoHTML.="<form action='" . $_SERVER["PHP_SELF"] . "' method='post'><table width='40%'><tr><td colspan='4' align='center'>" . $resultado['materia'] . " Unidad " . $resultado['unidad'] . "</td></tr><tr><td colspan='4' align='center'><iframe scrolling='no' src='Imagen.php' width='300px' height='300px'></iframe></td></tr>";
+            $resultadoHTML.="<form action='" . $_SERVER["PHP_SELF"] . "' method='post'><table width='40%'><tr><td colspan='4' align='center'>" . $resultado['materia'] . " Unidad " . $resultado['unidad'] . "</td></tr><tr><td colspan='4' align='center'><img src='Imagen.php?id=".$idPregunta."' width='300px' height='300px'></img></td></tr>";
             $resultadoHTML.="<input type='hidden' name='idPregunta' value='" . $idPregunta . "' />";
             $resultadoHTML.="<tr><td colspan='4' align='justify'> " . $resultado['descripcion'] . "</td></tr>";
             $resultadoHTML.="<tr><td colspan='4' align='center'>" . $resultado['pregunta'] . "</td></tr>";
