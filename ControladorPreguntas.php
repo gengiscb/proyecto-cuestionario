@@ -68,6 +68,11 @@ class ControladorPreguntas {
         }
     }
     
+    public function calificacion(){
+        $servicioPreguntas = new ServicioPreguntas();
+        return $servicioPreguntas->calificarCuestionario();
+    }
+    
     public function finalizarCuestionario(){
         if(isset($_POST['finalizar'])){
             header('Location: principal_alumno.php');

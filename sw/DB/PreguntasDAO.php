@@ -80,6 +80,18 @@ class PreguntasDAO extends ConexionGeneral {
         }
     }
     
+    function eliminarCalificacionUsuario($idAlumno) {
+        $conexion = $this->abrirConexion();
+        $sql = "DELETE FROM calificaciones WHERE idAlumno = $idAlumno";
+        $resultado = $this->ejecutarConsulta($sql, $conexion);
+        if (!$resultado) {
+            $cerror = "Error.<br>";
+            $cerror .= "SQL: $sql <br>";
+            $cerror .= "Descripción: " . mysql_error($conexion);
+            echo $cerror;
+        }
+    }
+    
     function obtenerImagen($idPregunta){
         $conexion = $this->abrirConexion();
         $sql = "SELECT * FROM preguntas WHERE id=" . $idPregunta . " and estado='activa'";
