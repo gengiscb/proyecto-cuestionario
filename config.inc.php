@@ -8,7 +8,7 @@
 //Parametros necesarios para la conexion con la base de datos
 $GLOBALS["servidor"] = "localhost"; 
 $GLOBALS["usuarioDB"] = "root";  
-$GLOBALS["contrasenaDB"] = "root";  
+$GLOBALS["contrasenaDB"] = "";  
 $GLOBALS["base_datos"] = "cuestionario";
 
 //Parametros para la resolucin de urls
