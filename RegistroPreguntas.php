@@ -49,7 +49,8 @@ $agregarPregunta->agregarPregunta();
                         </div>
                         <div class="rowElem">
                             <label  for="descripcion" style="font-weight: bold"> Descripci&oacuten :</label>   
-                            <input class="input descipcion" type="text" name="descripcion" id="descripcion" value="" />
+                            <!--<input class="input descipcion" type="text" name="descripcion" id="descripcion" value="" />-->
+                            <TEXTAREA class=" input descipcion" id="descripcion"name="descripcion" rows="10" cols="20"></TEXTAREA> 
                         </div>
                         <div class="rowElem">
                             <label  for="pregunta" style="font-weight: bold"> Pregunta :</label>   
