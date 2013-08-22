@@ -18,7 +18,6 @@ www.amitjakhu.com
 
 <!--STYLESHEETS-->
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-<link href="css/Estilos.css" rel="stylesheet" type="text/css" />
 <link href="css/buttons.css" rel="stylesheet" type="text/css" />
 
 <!--SCRIPTS-->

@@ -244,6 +244,7 @@ form .login .rowElem input{
 #profesores{
     background: url(../images/profesores.jpg);
     background-size: 100%;
+
 }
 
 h1{
@@ -258,7 +259,7 @@ h1{
     margin-top: 30px;
     text-align: center;
     color:  #f3f3f3;
-    margin-left: 60px;
+/*    margin-left: 60px;*/
     font-size: 14px;
 }
 
@@ -269,6 +270,10 @@ h1{
 
 #activos{
     margin-top: 100px;
+    width: 800%;
+    text-align: left;
+    margin-left:  auto;
+    margin-right: auto;
 }
 
 .botonMenu-menu{
