@@ -1,6 +1,7 @@
 <?php
 
 include_once 'DB/PreguntasDAO.php';
+include_once 'DB/AlumnoDAO.php';
 
 class ServicioPreguntas {
 
@@ -112,8 +113,9 @@ class ServicioPreguntas {
     }
 
     function calificarCuestionario() {
-        $resultado = new PreguntasDAO();
-        $aciertos = count($resultado->obtenerPreguntasCorrectas($_SESSION['usuarioId']));
+        $preguntasDAO = new PreguntasDAO();
+        $aciertos = count($preguntasDAO->obtenerPreguntasCorrectas($_SESSION['usuarioId']));
+        $resultado = new AlumnoDAO;
         $resultado->calificarAlumno($_SESSION['usuarioId'], $aciertos);
         return "Aciertos: " . $aciertos;
     }

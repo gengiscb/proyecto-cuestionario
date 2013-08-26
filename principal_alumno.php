@@ -34,7 +34,7 @@ $controladorVista->iniciarClase();
                 <input class="button button-pill button-primary button-iniciar" type="submit" name="iniciarClase" value="Iniciar"></input>
             </form>
             <?php
-            echo $controladorPregunta->obtenerAciertos();
+//            echo $controladorPregunta->obtenerAciertos();
             ?>
         </div> 
         <div>

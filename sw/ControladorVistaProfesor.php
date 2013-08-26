@@ -39,6 +39,16 @@ class ControladorVistaProfesor {
             header('Location: registroPreguntas.php');
         }
     }
+    
+    function verPromedioAbrobados(){
+        include_once 'ServicioAlumno.php';
+        $servicioAlumno = new ServicioAlumno();
+        $servicioAlumno->obtenerPromedioAbrobados($_SESSION['usuarioId']);
+    }
+    
+    function verPromedioGeneral(){
+        
+    }
 
 }
 

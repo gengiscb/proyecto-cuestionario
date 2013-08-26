@@ -13,7 +13,7 @@ $sesion->filtroSesion();
 $sesion->cerrarSesion();
 $preguntas = $controladorPregunta->obtenerIdPreguntasActivas();
 $controladorPregunta->cargarSiguiente();
-$controladorPregunta->finalizarCuestionario();
+//$controladorPregunta->finalizarCuestionario();
 
 //$idPreguntas = $contoladorPregunta->obtenerIdPreguntasActivas();
 ?>
@@ -45,8 +45,8 @@ $controladorPregunta->finalizarCuestionario();
                 if (count($preguntas) <= $_SESSION['numPregunta']) {
                     echo '<div class= "preguntas">No hay mas preguntas</div>';
                     $_SESSION['numPregunta'] = 0;
-                    echo '<div><form action="'.$_SERVER["PHP_SELF"].'" method="post">
-                <input type="submit"class="button button-pill button-primary button-finalizar" name="finalizar" value="Finalizar" />        
+                    echo '<div><form action="principal_alumno.php" method="post">
+                <input type="submit" onclick="javascript:alert(\''.$controladorPregunta->calificacion().'\');" class="button button-pill button-primary button-finalizar" name="finalizar" value="Finalizar" />        
             </form><div>';
                 } else {
                     $idPregunta = $preguntas[$_SESSION['numPregunta']];

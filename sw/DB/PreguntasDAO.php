@@ -67,7 +67,7 @@ class PreguntasDAO extends ConexionGeneral {
             echo $cerror;
         }
     }
-
+    
     function eliminarRespuestasUsuario($idAlumno) {
         $conexion = $this->abrirConexion();
         $sql = "DELETE FROM resultadosalumno WHERE idAlumno = $idAlumno";
@@ -79,7 +79,7 @@ class PreguntasDAO extends ConexionGeneral {
             echo $cerror;
         }
     }
-    
+
     function eliminarCalificacionUsuario($idAlumno) {
         $conexion = $this->abrirConexion();
         $sql = "DELETE FROM calificaciones WHERE idAlumno = $idAlumno";
@@ -171,29 +171,7 @@ class PreguntasDAO extends ConexionGeneral {
         return $lista;
     }
 
-    function calificarAlumno($idAlumno, $aciertos) {
-        $conexion = $this->abrirConexion();
-        $sql = "SELECT * FROM calificaciones WHERE idAlumno= $idAlumno";
-        $existe = $this->ejecutarConsulta($sql, $conexion);
-        if (!$existe) {
-            $cerror = "No se envio su repuesta.<br>";
-            $cerror .= "SQL: $sql <br>";
-            $cerror .= "Descripción: " . mysql_error($conexion);
-            echo $cerror;
-        }
-        if (mysql_num_rows($existe) > 0) {
-            $sql = "UPDATE calificaciones SET aciertos=$aciertos WHERE idAlumno = $idAlumno";
-        } else {
-            $sql = "INSERT INTO calificaciones VALUES ($idAlumno,$aciertos)";
-        }
-        $resultado = $this->ejecutarConsulta($sql, $conexion);
-        if (!$resultado) {
-            $cerror = "No se envio su repuesta.<br>";
-            $cerror .= "SQL: $sql <br>";
-            $cerror .= "Descripción: " . mysql_error($conexion);
-            echo $cerror;
-        }
-    }
+    
     
     function agregarPregunta($materia, $unidad,$descripcion,$estado, $pregunta, $imagen,$respuestaCorrecta,$respuesta1,$respuesta2,$respuesta3){
         $conexion = $this->abrirConexion();

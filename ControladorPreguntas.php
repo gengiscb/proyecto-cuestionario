@@ -1,6 +1,7 @@
 <?php
 
 include_once 'sw/ServicioPreguntas.php';
+include_once 'sw/ServicioAlumno.php';
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -69,15 +70,15 @@ class ControladorPreguntas {
     }
     
     public function calificacion(){
-        $servicioPreguntas = new ServicioPreguntas();
-        return $servicioPreguntas->calificarCuestionario();
+        $servicioPregunta = new ServicioPreguntas();
+        return $servicioPregunta->calificarCuestionario();
     }
     
-    public function finalizarCuestionario(){
-        if(isset($_POST['finalizar'])){
-            header('Location: principal_alumno.php');
-        }
-    }
+//    public function finalizarCuestionario(){
+//        if(isset($_POST['finalizar'])){
+//            header('Location: principal_alumno.php');
+//        }
+//    }
     
     function obtenerAciertos(){
         $servicioPreguntas = new ServicioPreguntas();
