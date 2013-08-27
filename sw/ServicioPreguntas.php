@@ -95,7 +95,7 @@ class ServicioPreguntas {
                   </tr>";
                 $i++;
             }
-            $resultadoHTML.="<tr><td colspan='4' align='right'><input id='botonSig' type='submit' onclick='' name ='botonSig' value='Siguiente' disabled></input></td></tr>";
+            $resultadoHTML.="<tr><td colspan='4' align='right'><input id='botonSig'class='button button-pill button-primary button-finalizar' type='submit' onclick='' name ='botonSig' value='Siguiente' disabled></input></td></tr>";
             $resultadoHTML.="</table></form>";
         } else {
             $resultadoHTML.="<div class='preguntas'>No hay resultados</div>";

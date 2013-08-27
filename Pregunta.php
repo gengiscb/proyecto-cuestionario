@@ -65,10 +65,5 @@ $controladorPregunta->cargarSiguiente();
             ?>
         </div>
         
-        <div>
-      <?php
-         echo $gestorPlantilla->regresarPagina();
-      ?>
-        </div>
     </body>
 </html>
