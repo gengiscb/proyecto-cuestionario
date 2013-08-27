@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-08-2013 a las 20:47:39
+-- Tiempo de generación: 27-08-2013 a las 19:42:16
 -- Versión del servidor: 5.5.27
 -- Versión de PHP: 5.4.7
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `calificaciones` (
   `idAlumno` int(11) NOT NULL,
   `Aciertos` int(11) NOT NULL,
-  `totalPreguntas` int(11) NOT NULL,
+  `calificacion` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`idAlumno`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `calificaciones` (
 -- Volcado de datos para la tabla `calificaciones`
 --
 
-INSERT INTO `calificaciones` (`idAlumno`, `Aciertos`, `totalPreguntas`) VALUES
+INSERT INTO `calificaciones` (`idAlumno`, `Aciertos`, `calificacion`) VALUES
 (1, 0, 0),
 (2, 1, 0);
 
@@ -124,6 +124,7 @@ CREATE TABLE IF NOT EXISTS `resultadosalumno` (
 --
 
 INSERT INTO `resultadosalumno` (`idAlumno`, `idPregunta`, `respuestaAlumno`) VALUES
+(1, 6, '6'),
 (2, 6, '2');
 
 -- --------------------------------------------------------

@@ -115,9 +115,11 @@ class ServicioPreguntas {
     function calificarCuestionario() {
         $preguntasDAO = new PreguntasDAO();
         $aciertos = count($preguntasDAO->obtenerPreguntasCorrectas($_SESSION['usuarioId']));
+        $totalActivos = count($preguntasDAO->obtenerPreguntasActivas());
+        $calificacion = ($aciertos/$totalActivos)*100;
         $resultado = new AlumnoDAO;
-        $resultado->calificarAlumno($_SESSION['usuarioId'], $aciertos);
-        return "Aciertos: " . $aciertos;
+        $resultado->calificarAlumno($_SESSION['usuarioId'], $aciertos, $calificacion);
+        return "Aciertos: " . $aciertos." Calificaci\u00F3n: ". $calificacion;
     }
 
     function eliminarRespuestas() {
