@@ -64,6 +64,5 @@ $controladorPregunta->cargarSiguiente();
             }
             ?>
         </div>
-        
     </body>
 </html>

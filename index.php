@@ -42,7 +42,7 @@ $(document).ready(function() {
 </script>
 
 </head>
-<body>
+<body id="bodylogin">
 
 <!--WRAPPER-->
 <div id="wrapper">

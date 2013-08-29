@@ -18,28 +18,28 @@ $controladorVista->iniciarClase();
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8/unicode">
-           <link rel="stylesheet" href="css/font-awesome.min.css">
-           <link rel="stylesheet" href="css/buttons.css">
-           <link rel="stylesheet" href="css/Estilos.css">
-           <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/buttons.css">
+        <link rel="stylesheet" href="css/Estilos.css">
+        <link rel="stylesheet" href="css/style.css">
         <title>Preguntas Activas</title>
     </head>
     <body id="profesores">
-        <div>
+        <div id="contenedorEncabezado" >
             <?php echo $gestorPlantilla->formCerrarSesion(); ?>
+            <h1>Preguntas Activas</h1>
         </div>
-        <h1>Preguntas Activas</h1>
-        <div id="activos">
-        <?php
-        echo $listarPreguntas->listarPreguntasActivadas();
-      ?>
-       
+        <div id="contenedorCentral">
+            <div id="activos">
+                <?php
+                echo $listarPreguntas->listarPreguntasActivadas();
+                ?>
+            </div>
         </div>
-       
-        <div>
-      <?php
-         echo $gestorPlantilla->regresarPagina();
-      ?>
+        <div id="contenedorPie">
+            <?php
+            echo $gestorPlantilla->regresarPagina();
+            ?>
         </div>
     </body>
 </html>

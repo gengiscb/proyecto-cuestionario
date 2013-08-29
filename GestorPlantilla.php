@@ -13,7 +13,7 @@
 class GestorPlantilla {
 
     public function formCerrarSesion() {
-        $formCerrarSesion = '<form action="' . $_SERVER["PHP_SELF"] . '" method="post">
+        $formCerrarSesion = '<form class="formCerrar" action="' . $_SERVER["PHP_SELF"] . '" method="post">
                                 <input type="submit" class="button button-pill button-primary button-sesion" name="cerrar" value="Cerrar sesion" />        
                             </form>';
         return $formCerrarSesion;

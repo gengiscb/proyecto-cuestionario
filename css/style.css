@@ -32,7 +32,7 @@ BODY STYLING
 	border: 0;
 }
 
-body {
+#bodylogin{
 	background: url(../images/bg.png) repeat;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight:300;
@@ -504,4 +504,9 @@ h4{
 
 a{
  text-decoration:  none;
+}
+
+
+form .formCerrar{
+    text-align: right;
 }

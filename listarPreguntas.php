@@ -13,36 +13,42 @@ $listarPreguntas = new ControladorPreguntas();
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8/unicode">
-           <link rel="stylesheet" href="css/font-awesome.min.css">
-           <link rel="stylesheet" href="css/buttons.css">
-           <link rel="stylesheet" href="css/Estilos.css">
-           <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/buttons.css">
+        <link rel="stylesheet" href="css/Estilos.css">
+        <link rel="stylesheet" href="css/style.css">
 
         <?php echo $gestorPlantilla->estilos() ?>
         <title></title>
     </head>
-    <body id="profesores">
-        <div class="contenido" >
+    <body >
+        <div id="contenedorEncabezado">
             <h1>Preguntas</h1>
-            <div class="marco" >
-                <h1>Habilitar Preguntas</h1>
-                <div>
-                    <div class="preguntas">
-                        <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>" >
-                            <?php
-                            echo $listarPreguntas->listarPreguntas();
-                            $listarPreguntas->redireccionarProfesor();
-                            ?>
-                        </form> 
-
-                    </div>
-
+            <h1>Habilitar Preguntas</h1>
         </div>
-                                   <div>
-                        <?php
-                        echo $gestorPlantilla->regresarPagina();
-                        ?>
-                    </div>                         
-    </body>
+        <div>
+            <div id="contenedorCentral">
+                <div class="contenido" >
+                    <div class="marco" >
+                        <div class="preguntas">
+                            <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>" >
+                                <?php
+                                echo $listarPreguntas->listarPreguntas();
+                                $listarPreguntas->redireccionarProfesor();
+                                ?>
+                            </form> 
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contenedorPie">
+                <?php
+                echo $gestorPlantilla->regresarPagina();
+                ?>
+            </div> 
+        </div>
+    </div>
+</body>
 </html>
 <? ob_flush(); ?>

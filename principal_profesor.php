@@ -25,10 +25,12 @@ $sesion->filtroSesion();
     </head>
 
     <body id="profesores">
-        <div align="right">
-            <?php echo $gestorPlantilla->formCerrarSesion(); ?>
+        <div id="contenedorEncabezado">
+            <div align="right">
+                <?php echo $gestorPlantilla->formCerrarSesion(); ?>
+            </div>
         </div>
-        <div id="contenedorMenu" >
+        <div id="contenedorCentral" >
             <form method="post" id="menuProfesor" action="<?php echo $_SERVER['PHP_SELF'] ?>" >
                 <div class="contenedorBoton">
                     <input class="botonMenu" type="submit" name="activarPreg" value="Activar preguntas"></input>
@@ -43,6 +45,7 @@ $sesion->filtroSesion();
                     <input class="botonMenu" type="submit" name="registroPreguntas" value="Registro Preguntas"></input>
                 </div>
             </form>
-        </div> 
+        </div>
+        <div id="contenedorPie"></div>
     </body>
 </html>
