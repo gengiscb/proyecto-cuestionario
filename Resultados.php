@@ -1,11 +1,11 @@
 <?php
 include_once 'config.inc.php';
-include_once 'ControladorPreguntas.php';
+include_once 'sw/ControladorVistaProfesor.php';
 include_once 'sw/Sesion.php';
 include_once 'GestorPlantilla.php';
 
 $sesion = new Sesion();
-$controladorPregunta = new ControladorPreguntas();
+$controladorVista = new ControladorVistaProfesor();
 $gestorPlantilla = new GestorPlantilla();
 
 $sesion->filtroSesion();
@@ -26,9 +26,10 @@ $sesion->cerrarSesion();
             <?php echo $gestorPlantilla->formCerrarSesion() ?>
         </div>
         <div>
+
             <?php
-            echo "Promedio de aprobados: ";
-            echo "Promedio general: "
+            echo "<p> Promedio de aprobados: " .  $controladorVista->verPromedioAbrobados()."
+                </p><p>Promedio general: ". $controladorVista->verPromedioGeneral() . "</p>";
             ?>
         </div>
         <div>

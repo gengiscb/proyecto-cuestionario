@@ -42,12 +42,16 @@ class ControladorVistaProfesor {
     
     function verPromedioAbrobados(){
         include_once 'ServicioAlumno.php';
+        include_once 'DB/AlumnoDAO.php';
         $servicioAlumno = new ServicioAlumno();
-        $servicioAlumno->obtenerPromedioAbrobados($_SESSION['usuarioId']);
+        return $servicioAlumno->obtenerPromedioAprobados();
     }
     
     function verPromedioGeneral(){
-        
+        include_once 'ServicioAlumno.php';
+        include_once 'DB/AlumnoDAO.php';
+        $servicioAlumno = new ServicioAlumno();
+        return $servicioAlumno->obtenerPromedioGeneral();
     }
 
 }

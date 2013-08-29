@@ -44,14 +44,47 @@ class AlumnoDAO extends ConexionGeneral{
             $cerror .= "Descripción: " . mysql_error($conexion);
             echo $cerror;
         }
-        echo $calificacion;
-        return $calificacion;
+        return mysql_fetch_array($calificacion);
     }
 
 
-    public function obtenerAlumnosAprobados($idProfesor) {
+    public function obtenerCalificacionesAlumnosA() {
         $conexion = $this->abrirConexion();
-        $sql = "SELECT ";
+        $sql = "SELECT * FROM calificaciones c JOIN usuarios u ON c.idAlumno = u.usuarioId WHERE c.calificacion>=60 and u.tipoUsuario=2";
+        $resultado = $this->ejecutarConsulta($sql, $conexion);
+        $alumnosAprobados = Array();
+        $i = 0;
+        while ($alumno = mysql_fetch_array($resultado)) {
+            $alumnosAprobados[$i] = $alumno;
+            $i++;
+        }
+        return $alumnosAprobados;
+    }
+    
+    public function obtenerCalificacionesAlumnos() {
+        $conexion = $this->abrirConexion();
+        $sql = "SELECT * FROM calificaciones c JOIN usuarios u ON c.idAlumno = u.usuarioId WHERE u.tipoUsuario=2";
+        $resultado = $this->ejecutarConsulta($sql, $conexion);
+        $alumnosAprobados = Array();
+        $i = 0;
+        while ($alumno = mysql_fetch_array($resultado)) {
+            $alumnosAprobados[$i] = $alumno;
+            $i++;
+        }
+        return $alumnosAprobados;
+    }
+    
+    public function obtenerAlumnosProfesor(){
+        $conexion = $this->abrirConexion();
+        $sql = "SELECT * FROM usuarios WHERE tipoUsuario=2";
+        $alumno = $this->ejecutarConsulta($sql, $conexion);
+        if (!$alumno) {
+            $cerror = "No se envio su repuesta.<br>";
+            $cerror .= "SQL: $sql <br>";
+            $cerror .= "Descripción: " . mysql_error($conexion);
+            echo $cerror;
+        }
+        return $alumno;
     }
 
 }

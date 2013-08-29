@@ -16,11 +16,28 @@ class ServicioAlumno{
         }
     }
     
-    public function obtenerPromedioAprobados($idProfesor){
+    public function obtenerPromedioAprobados(){
         $alumnoDAO = new AlumnoDAO();
-        $alumnosAprobados = $alumnoDAO->obtenerAlumnosAprobados($idProfesor);
-        $numeroAprobados = count($alumnosAprobados);
+        $alumnosAprobados = $alumnoDAO->obtenerCalificacionesAlumnosA();
+        return $this->caclularPromedio($alumnosAprobados);
     }
+    
+    public function obtenerPromedioGeneral(){
+        $alumnoDAO = new AlumnoDAO();
+        $alumnosAprobados = $alumnoDAO->obtenerCalificacionesAlumnos();
+        return $this->caclularPromedio($alumnosAprobados);
+    }
+    
+    private function caclularPromedio($alumnos){
+        $totalAlumnos = count($alumnos);
+        $sumaCalificaciones =0;
+        foreach ($alumnos as $alumno){
+            $sumaCalificaciones += $alumno['calificacion'];
+        }
+        $promedio = $sumaCalificaciones/$totalAlumnos;
+        return $promedio;
+    }
+    
 }
 
 ?>
