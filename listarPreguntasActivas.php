@@ -25,18 +25,18 @@ $controladorVista->iniciarClase();
         <title>Preguntas Activas</title>
     </head>
     <body id="profesores">
-        <div id="contenedorEncabezado" >
+        <div class="contenedorEncabezado" >
             <?php echo $gestorPlantilla->formCerrarSesion(); ?>
             <h1>Preguntas Activas</h1>
         </div>
-        <div id="contenedorCentral">
+        <div class="contenedorCentral">
             <div id="activos">
                 <?php
                 echo $listarPreguntas->listarPreguntasActivadas();
                 ?>
             </div>
         </div>
-        <div id="contenedorPie">
+        <div class="contenedorPie" id="regresar" >
             <?php
             echo $gestorPlantilla->regresarPagina();
             ?>

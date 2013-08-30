@@ -15,19 +15,19 @@ $listarPreguntas = new ControladorPreguntas();
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8/unicode">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/buttons.css">
-        <link rel="stylesheet" href="css/Estilos.css">
+        <!--<link rel="stylesheet" href="css/Estilos.css">-->
         <link rel="stylesheet" href="css/style.css">
 
         <?php echo $gestorPlantilla->estilos() ?>
         <title></title>
     </head>
     <body >
-        <div id="contenedorEncabezado">
+        <div class="contenedorEncabezado">
             <h1>Preguntas</h1>
             <h1>Habilitar Preguntas</h1>
         </div>
         <div>
-            <div id="contenedorCentral">
+            <div class="contenedorCentral">
                 <div class="contenido" >
                     <div class="marco" >
                         <div class="preguntas">
@@ -42,7 +42,7 @@ $listarPreguntas = new ControladorPreguntas();
                     </div>
                 </div>
             </div>
-            <div id="contenedorPie">
+            <div class="contenedorPie">
                 <?php
                 echo $gestorPlantilla->regresarPagina();
                 ?>

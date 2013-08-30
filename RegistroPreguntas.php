@@ -17,7 +17,7 @@ $gestorPlantilla->regresarPagina();
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link href="css/buttons.css" rel="stylesheet" type="text/css" />
     </head>
-    <body>
+    <body id="bodylogin">
 
         <div class="contenido">
             <div class="marco_registro"> 
@@ -81,9 +81,7 @@ $gestorPlantilla->regresarPagina();
                         <div class="footer">
                             <input type="hidden" name="login" value="login"/>
                             <input type="submit"  name="btn_registrar" class="button2"  id="acceder" value="Guardar Pregunta"/>
-                            <?php
-                        echo $gestorPlantilla->regresarPagina();
-                        ?>
+                            <a class="button3" name="btn_regresar"  href="javascript:window.history.back();">&laquo; Volver atr&aacutes</a>
                         </div>
                        
                         
