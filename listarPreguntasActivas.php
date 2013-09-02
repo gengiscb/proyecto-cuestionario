@@ -11,6 +11,7 @@ $gestorPlantilla = new GestorPlantilla();
 $gestorPlantilla->regresarPagina();
 $sesion = new Sesion();
 $sesion->filtroSesion();
+$sesion->filtroPorfesor();
 $sesion->cerrarSesion();
 $controladorVista->iniciarClase();
 ?>
@@ -36,7 +37,7 @@ $controladorVista->iniciarClase();
                 ?>
             </div>
         </div>
-        <div class="contenedorPie" id="regresar" >
+        <div class="contenedorPie">
             <?php
             echo $gestorPlantilla->regresarPagina();
             ?>

@@ -75,6 +75,12 @@ class Sesion {
         }
     }
     
+    public function filtroPorfesor(){
+        if($_SESSION['tipo'] != 1){
+            header("Location: principal_alumno.php");
+        }
+    }
+    
     public function cerrarSesion()
     {
         if (isset($_POST["cerrar"])) {

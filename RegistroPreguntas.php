@@ -3,11 +3,15 @@ include_once 'config.inc.php';
 include_once 'sw/DB/ConexionGeneral.php';
 include_once 'ControladorPreguntas.php';
 include_once 'GestorPlantilla.php';
+include_once 'sw/Sesion.php';
 
 $agregarPregunta = new ControladorPreguntas();
 $agregarPregunta->agregarPregunta();
 $gestorPlantilla = new GestorPlantilla();
 $gestorPlantilla->regresarPagina();
+$sesion = new Sesion();
+$sesion->filtroSesion();
+$sesion->filtroPorfesor();
 ?>
 <!DOCTYPE html>
 <html>
