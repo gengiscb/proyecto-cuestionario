@@ -34,7 +34,11 @@ class ServicioAlumno{
         foreach ($alumnos as $alumno){
             $sumaCalificaciones += $alumno['calificacion'];
         }
-        $promedio = $sumaCalificaciones/$totalAlumnos;
+        if($totalAlumnos>0){
+            $promedio = $sumaCalificaciones/$totalAlumnos;
+        }else{
+            $promedio = 0;
+        }
         return $promedio;
     }
     

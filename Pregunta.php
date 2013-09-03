@@ -14,26 +14,33 @@ $sesion->cerrarSesion();
 $preguntas = $controladorPregunta->obtenerIdPreguntasActivas();
 $controladorPregunta->cargarSiguiente();
 //$controladorPregunta->finalizarCuestionario();
-
 //$idPreguntas = $contoladorPregunta->obtenerIdPreguntasActivas();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8/unicode" />
-           <link rel="stylesheet" href="css/font-awesome.min.css"></link>
-           <link rel="stylesheet" href="css/buttons.css"></link>
-           <link rel="stylesheet" href="css/Estilos.css"></link>
-           <link rel="stylesheet" href="css/style.css"></link>
-           <!--<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>-->
-           <script type="text/javascript" src="js/buttons.js"></script>
-           
+        <meta http-equiv="Expires" content="0" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <link rel="stylesheet" href="css/font-awesome.min.css"></link>
+        <link rel="stylesheet" href="css/buttons.css"></link>
+        <link rel="stylesheet" href="css/Estilos.css"></link>
+        <link rel="stylesheet" href="css/style.css"></link>
+        <!--<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>-->
+        <script type="text/javascript" src="js/buttons.js"></script>
+
         <title>Cuestionario Alumno</title>
     </head>
-    <script>
-        function habilitarSiguiente(form){
+    <script type="text/javascript">
+        {
+            if (history.forward(1))
+                location.replace(history.forward(1))
+        }
+
+        function habilitarSiguiente(form) {
             form.botonSig.disabled = false;
         }
+
     </script>
     <body id="alumnos">
         <div align="right">
@@ -44,9 +51,8 @@ $controladorPregunta->cargarSiguiente();
                 }
                 if (count($preguntas) <= $_SESSION['numPregunta']) {
                     echo '<div class= "preguntas">No hay mas preguntas</div>';
-                    $_SESSION['numPregunta'] = 0;
                     echo '<div><form action="principal_alumno.php" method="post">
-                <input type="submit" onclick="javascript:alert(\''.$controladorPregunta->calificacion().'\');" class="button button-pill button-primary button-finalizar" name="finalizar" value="Finalizar" />        
+                <input type="submit" onclick="javascript:alert(\'' . $controladorPregunta->calificacion() . '\');" class="button button-pill button-primary button-finalizar" name="finalizar" value="Finalizar" />        
             </form><div>';
                 } else {
                     $idPregunta = $preguntas[$_SESSION['numPregunta']];

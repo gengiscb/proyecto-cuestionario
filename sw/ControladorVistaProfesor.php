@@ -40,6 +40,12 @@ class ControladorVistaProfesor {
         }
     }
     
+    function verResultados(){
+        if(isset($_POST['resultados'])){
+            header('Location: Resultados.php');
+        }
+    }
+    
     function verPromedioAbrobados(){
         include_once 'ServicioAlumno.php';
         include_once 'DB/AlumnoDAO.php';

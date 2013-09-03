@@ -1,6 +1,8 @@
 <?php
 include_once 'config.inc.php';
 include_once 'sw/Sesion.php';
+$sesion = new Sesion();
+$sesion->sesionActiva();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -52,7 +54,7 @@ $(document).ready(function() {
     <div class="pass-icon"></div>
     <!--END SLIDE-IN ICONS-->
                 <?php
-                $sesion = new Sesion();
+                
                 echo $sesion->iniciarSesion();
                 ?>
 <!--LOGIN FORM-->

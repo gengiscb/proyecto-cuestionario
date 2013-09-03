@@ -11,6 +11,7 @@ $controladorVista->verPreguntas();
 $controladorVista->verPreguntasActivas();
 $controladorVista->iniciarClase();
 $controladorVista->registrarPreguntas();
+$controladorVista->verResultados();
 $sesion->cerrarSesion();    
 $sesion->filtroSesion();
 $sesion->filtroPorfesor();
@@ -44,6 +45,9 @@ $sesion->filtroPorfesor();
                 </div>
                 <div class="contenedorBoton">
                     <input class="botonMenu" type="submit" name="registroPreguntas" value="Registro Preguntas"></input>
+                </div>
+                <div class="contenedorBoton">
+                    <input class="botonMenu" type="submit" name="resultados" value="Resultados"></input>
                 </div>
             </form>
         </div>

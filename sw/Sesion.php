@@ -59,8 +59,6 @@ class Sesion {
                     header("Location: principal_profesor.php");
                 }
             }
-        } else {
-            header("Location: index.php");
         }
     }
 
