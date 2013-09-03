@@ -1,8 +1,3 @@
-/*******************
-LOGIN FORM STYLESHEET
-by: Amit Jakhu
-www.amitjakhu.com
-*******************/
 
 /*******************
 FONTS
@@ -232,7 +227,7 @@ CONTENT
     margin-left: 110px;
 }
 .registro-form .content .materia{
-    margin-left: 105px;
+    margin-left: 107px;
 }
 .registro-form .content .descipcion{
      margin-left: 70px;
@@ -244,6 +239,10 @@ CONTENT
 
 .registro-form .content .correcta{
      margin-left: 10px;
+}
+
+.registro-form .content .image{
+    margin-left: 110px;
 }
 /* Second input field */
 .login-form .content .password, .login-form .content .pass-icon {
@@ -487,7 +486,7 @@ h4{
 }
 
 .titulo h4{
-    margin-left: 35px;
+    margin-left: 25px;
 }
 
 .regresar{

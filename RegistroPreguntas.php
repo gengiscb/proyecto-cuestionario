@@ -43,7 +43,7 @@ $sesion->filtroPorfesor();
                                 </div>
                                 <label for="unidad" style="font-weight: bold"> Imagen:</label>
                                 <input name="MAX_FILE_SIZE" value="8388608" type="hidden">
-                                <input name="image" class="input materia" accept="image/jpeg" type="file" id="image">
+                                <input name="image" class="input image" accept="image/jpeg" type="file" id="image">
                             </div>
                             <div class="rowElem">
                                 <label for="materia" style="font-weight: bold"> Materia:</label>                          	  
