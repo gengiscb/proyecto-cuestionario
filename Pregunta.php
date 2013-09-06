@@ -32,10 +32,6 @@ $controladorPregunta->cargarSiguiente();
         <title>Cuestionario Alumno</title>
     </head>
     <script type="text/javascript">
-        {
-            if (history.forward(1))
-                location.replace(history.forward(1))
-        }
 
         function habilitarSiguiente(form) {
             form.botonSig.disabled = false;
@@ -54,11 +50,11 @@ $controladorPregunta->cargarSiguiente();
                     echo '<div><form action="principal_alumno.php" method="post">
                 <input type="submit" onclick="javascript:alert(\'' . $controladorPregunta->calificacion() . '\');" class="button button-pill button-primary button-finalizar" name="finalizar" value="Finalizar" />        
             </form><div>';
+                    $_SESSION['encurso'] = false;
                 } else {
                     $idPregunta = $preguntas[$_SESSION['numPregunta']];
                 }
             } else {
-                echo $gestorPlantilla->formCerrarSesion();
                 echo '<div class= "preguntas">No hay pregunta activas</div>';
             }
             ?>

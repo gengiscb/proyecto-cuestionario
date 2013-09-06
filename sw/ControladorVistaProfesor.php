@@ -28,6 +28,7 @@ class ControladorVistaProfesor {
     function iniciarClase() {
         include_once 'ServicioPreguntas.php';
         if (isset($_POST['iniciarClase'])) {
+            $_SESSION['encurso']=true;
             $servicioPreguntas = new ServicioPreguntas();
             $servicioPreguntas->eliminarRespuestas();
             header('Location: Pregunta.php');
