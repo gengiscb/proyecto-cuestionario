@@ -18,8 +18,7 @@ www.amitjakhu.com
 
 <!--STYLESHEETS-->
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-<link href="css/buttons.css" rel="stylesheet" type="text/css" />
-
+<link href="css/buttons.css" rel="stylesheet" type="text/css" /
 <!--SCRIPTS-->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
 <!--Slider-in icons-->
@@ -42,7 +41,7 @@ $(document).ready(function() {
 </script>
 
 </head>
-<body>
+    <body id="bodylogin">
 
 <!--WRAPPER-->
 <div id="wrapper">
@@ -76,7 +75,7 @@ $(document).ready(function() {
     <div class="footer">
         <input type="hidden" name="registrar_alumno" value="registrar"/>
         <!--LOGIN BUTTON--><input type="submit" name="btn_sesion"  id="acceder" value="Registrar" class="button2 registrar" /><!--END LOGIN BUTTON-->
-                           <input type="button" class="button2 regresar" onclick="document.location = 'index.php';"  name="btn_regresar" class="boton"  id="regresar" value="Regresar"/>
+                           <input type="button" class="button2 regresar" onclick="document.location = 'index.php';"  name="btn_regresar" class="boton" value="Regresar"/>
     </div>
     <!--END FOOTER-->
 
