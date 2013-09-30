@@ -12,12 +12,12 @@ $controladorVista->verPreguntasActivas();
 $controladorVista->iniciarClase();
 $controladorVista->registrarPreguntas();
 $controladorVista->verResultados();
-$sesion->cerrarSesion();    
+$sesion->cerrarSesion();
 $sesion->filtroSesion();
 $sesion->filtroPorfesor();
 
-if(isset($_SESSION['encurso'])){
-    if($_SESSION['encurso']==true){
+if (isset($_SESSION['encurso'])) {
+    if ($_SESSION['encurso'] == true) {
         header('Location: Pregunta.php');
     }
 }
@@ -40,21 +40,36 @@ if(isset($_SESSION['encurso'])){
         </div>
         <div class="contenedorCentral" >
             <form method="post" id="menuProfesor" action="<?php echo $_SERVER['PHP_SELF'] ?>" >
-                <div class="contenedorBoton">
-                    <input class="botonMenu" type="submit" name="activarPreg" value="Activar preguntas"></input>
-                </div>
-                <div class="contenedorBoton">
-                    <input class="botonMenu" type="submit" name="preguntasActivas" value="Ver preguntas activas"></input>
-                </div>
-                <div class="contenedorBoton">
-                    <input class="botonMenu" type="submit" name="iniciarClase" value="Iniciar clase"></input>
-                </div>
-                <div class="contenedorBoton">
-                    <input class="botonMenu" type="submit" name="registroPreguntas" value="Registro Preguntas"></input>
-                </div>
-                <div class="contenedorBoton">
-                    <input class="botonMenu" type="submit" name="resultados" value="Resultados"></input>
-                </div>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="contenedorBoton">
+                                <input class="botonMenu" type="submit" name="activarPreg" value="Activar preguntas"></input>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="contenedorBoton">
+                                <input class="botonMenu" type="submit" name="preguntasActivas" value="Ver preguntas activas"></input>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="contenedorBoton">
+                                <input class="botonMenu" type="submit" name="iniciarClase" value="Iniciar clase"></input>
+                            </div>
+                        </td>
+                        <tr>
+                            <td>
+                                <div class="contenedorBoton">
+                                    <input class="botonMenu" type="submit" name="registroPreguntas" value="Registro Preguntas"></input>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="contenedorBoton">
+                                    <input class="botonMenu" type="submit" name="resultados" value="Resultados"></input>
+                                </div
+                            </td>
+                        </tr>
+                </table>
             </form>
         </div>
         <div class="contenedorPie"></div>

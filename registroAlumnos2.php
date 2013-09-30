@@ -18,11 +18,16 @@ www.amitjakhu.com
 
 <!--STYLESHEETS-->
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-<link href="css/buttons.css" rel="stylesheet" type="text/css" /
+<link href="css/buttons.css" rel="stylesheet" type="text/css" />
+<link href="css/Validacion.css" rel="stylesheet" type="text/css" />
 <!--SCRIPTS-->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" language="javascript" src="js/scriptaculous/lib/prototype.js"></script>
+<script type="text/javascript" language="javascript" src="js/scriptaculous/src/scriptaculous.js"></script>
+<script type="text/javascript" language="javascript" src="js/jsvalidate.js"></script>
 <!--Slider-in icons-->
 <script type="text/javascript">
+    
 $(document).ready(function() {
 	$(".username").focus(function() {
 		$(".user-icon").css("left","-48px");
@@ -66,8 +71,8 @@ $(document).ready(function() {
 	
 	<!--CONTENT-->
     <div class="content">
-	<!--USERNAME--><input name="nombre" type="text" class="input username" value="Nombre" id="nombre" onfocus="this.value=''" /><!--END USERNAME-->
-    <!--PASSWORD--><input name="apellido" type="text" class="input password" value="Apellido" id="apellidoP" onfocus="this.value=''" /><!--END PASSWORD-->
+	<!--USERNAME--><input name="nombre" type="text" class="input username jsrequired jsvalidate_alpha" value="Nombre" id="nombre" onfocus="this.value=''" /><!--END USERNAME-->
+    <!--PASSWORD--><input name="apellido" type="text" class="input password jsrequired jsvalidate_alpha" value="Apellido" id="apellidoP" onfocus="this.value=''" /><!--END PASSWORD-->
     </div>
     <!--END CONTENT-->
     

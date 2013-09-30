@@ -20,6 +20,11 @@ $sesion->filtroPorfesor();
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8/Unicode">
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link href="css/buttons.css" rel="stylesheet" type="text/css" />
+        <link href="css/Validacion.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" language="javascript" src="js/scriptaculous/lib/prototype.js"></script>
+        <script type="text/javascript" language="javascript" src="js/scriptaculous/src/scriptaculous.js"></script>
+        <script type="text/javascript" language="javascript" src="js/jsvalidate.js"></script>
+        <!--Slider-in icons-->
     </head>
     <body id="bodylogin">
 
@@ -41,43 +46,43 @@ $sesion->filtroPorfesor();
                                 <div class="titulo">
                                     <h4 class="subtitulo">Por favor suba una imagen de m&aacute;ximo 1MB</h4>
                                 </div>
-                                <label for="unidad" style="font-weight: bold"> Imagen:</label>
+                                <label for="image" style="font-weight: bold"> Imagen:</label>
                                 <input name="MAX_FILE_SIZE" value="8388608" type="hidden">
-                                <input name="image" class="input image" accept="image/jpeg" type="file" id="image">
+                                <input name="image" class="input image " accept="image/jpeg" type="file" id="image">
                             </div>
                             <div class="rowElem">
                                 <label for="materia" style="font-weight: bold"> Materia:</label>                          	  
-                                <input name="materia" type="text" class="input materia" id="materia" value="" size="50" maxlength="50"/>
+                                <input name="materia" type="text" class="input materia jsrequired" id="materia" value="" maxlength="50" />
                             </div>
 
                             <div class="rowElem">
                                 <label for="unidad" style="font-weight: bold"> Unidad:</label>                          	  
-                                <input class="input unidad" type="text" name="unidad" id="unidad" value="" />
+                                <input class="input unidad jsrequired" type="text" name="unidad" id="unidad" value="" />
                             </div>
                             <div class="rowElem">
                                 <label  for="descripcion" style="font-weight: bold "> Descripci&oacuten :</label>   
                                 <!--<input class="input descipcion" type="text" name="descripcion" id="descripcion" value="" />-->
-                                <TEXTAREA class=" input descipcion" id="descripcion"name="descripcion" rows="10" cols="20"></TEXTAREA> 
+                                <TEXTAREA class=" input descipcion jsrequired" id="descripcion"name="descripcion" rows="10" cols="20"></TEXTAREA> 
                             </div>
                             <div class="rowElem">
                                 <label  for="pregunta" style="font-weight: bold"> Pregunta :</label>   
-                                <input class="input pregunta" type="text" name="pregunta" id="pregunta" value="" />
+                                <input class="input pregunta jsrequired" type="text" name="pregunta" id="pregunta" value="" />
                             </div>
                             <div class="rowElem">
-                                <label  for="respcor" style="font-weight: bold"> Respuesta Correcta :</label>   
-                                <input class="input correcta" type="text" name="respuestaCorrecta" id="respuestaCorrecta" value="" />
+                                <label  for="respuestaCorrecta" style="font-weight: bold"> Respuesta Correcta :</label>   
+                                <input class="input correcta jsrequired" type="text" name="respuestaCorrecta" id="respuestaCorrecta" value="" />
                             </div>
                             <div class="rowElem">
-                                <label  for="resp1" style="font-weight: bold"> Respuesta Incorrecta :</label>   
-                                <input class="input incorrecta" type="text" name="respuesta1" id="respuesta1" value="" />
+                                <label  for="respuesta1" style="font-weight: bold"> Respuesta Incorrecta :</label>   
+                                <input class="input incorrecta jsrequired" type="text" name="respuesta1" id="respuesta1" value="" />
                             </div>
                             <div class="rowElem">
-                                <label  for="resp2" style="font-weight: bold"> Respuesta Incorrecta :</label>   
-                                <input class="input incorrecta" type="text" name="respuesta2" id="respuesta2" value="" />
+                                <label  for="respuesta2" style="font-weight: bold"> Respuesta Incorrecta :</label>   
+                                <input class="input incorrecta jsrequired" type="text" name="respuesta2" id="respuesta2" value="" />
                             </div>
                             <div class="rowElem">
-                                <label  for="resp3" style="font-weight: bold"> Respuesta Incorrecta :</label>   
-                                <input class="input incorrecta" type="text" name="respuesta3" id="respuesta3" value="" />
+                                <label  for="respuesta3" style="font-weight: bold"> Respuesta Incorrecta :</label>   
+                                <input class="input incorrecta jsrequired" type="text" name="respuesta3" id="respuesta3" value="" />
                             </div>
 
                         </div>
