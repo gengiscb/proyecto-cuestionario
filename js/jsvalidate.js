@@ -648,7 +648,7 @@ function blurAction(field_reference,form_ref){
 					thisTag = field_reference.tagName;
 				}
 				if((thisTag == "INPUT" && (field_type == "text" || field_type == "password")) || thisTag == "TEXTAREA"){
-					if(field_reference.value == ""){
+					if(field_reference.value == "" || field_reference.value=="Nombre" || field_reference.value=="Apellido" ){
 						bad_field = true;
 					}
 				}

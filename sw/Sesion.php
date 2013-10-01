@@ -12,9 +12,9 @@ class Sesion {
 
     function iniciarSesion() {
         if (isset($_POST['login'])) {
-            if (isset($_POST["nombre"])) {
+            if (isset($_POST["nombre"]) && $_POST["nombre"] != "Nombre") {
                 $nombre = $_POST["nombre"];
-                if (isset($_POST["apellido"])) {
+                if (isset($_POST["apellido"]) && $_POST["apellido"] != "Apellido") {
                     $apellido = $_POST["apellido"];
                     $usuarioDAO = new UsuarioDAO();
                     $usuario = $usuarioDAO->seleccionarUsuarioPorNombre($nombre);
@@ -41,8 +41,10 @@ class Sesion {
                         return "<div class='error'>Datos introducidos incorrectos</div>";
                     }
                 } else {
-                    return "<div class='error'>Escriba su contraseña</div>";
+                    return "<div class='error'>Escriba su apellido</div>";
                 }
+            } else {
+                return "<div class='error'>Escriba su nombre</div>";
             }
         }
     }
@@ -72,15 +74,14 @@ class Sesion {
             header("Location: index.php");
         }
     }
-    
-    public function filtroPorfesor(){
-        if($_SESSION['tipo'] != 1){
+
+    public function filtroPorfesor() {
+        if ($_SESSION['tipo'] != 1) {
             header("Location: principal_alumno.php");
         }
     }
-    
-    public function cerrarSesion()
-    {
+
+    public function cerrarSesion() {
         if (isset($_POST["cerrar"])) {
             session_start();
             $_SESSION = array();
@@ -88,6 +89,8 @@ class Sesion {
             session_destroy();
         }
     }
+
 }
+
 ?>
 <? ob_flush(); ?>

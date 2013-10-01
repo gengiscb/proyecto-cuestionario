@@ -6,7 +6,7 @@
         Purpose of the stylesheet follows.
 */
 
-.jsvalidation{
+.jsvalidation, .error{
     font-size: 11px;
     color: red;
 }

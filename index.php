@@ -6,90 +6,89 @@ $sesion->sesionActiva();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-<head>
+    <head>
 
-<!--------------------
-LOGIN FORM
-by: Amit Jakhu
-www.amitjakhu.com
---------------------->
+        <!--------------------
+        LOGIN FORM
+        by: Amit Jakhu
+        www.amitjakhu.com
+        --------------------->
 
-<!--META-->
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Inicio de Sesi&oacute;n</title>
+        <!--META-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Inicio de Sesi&oacute;n</title>
 
-<!--STYLESHEETS-->
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-<link href="css/buttons.css" rel="stylesheet" type="text/css" />
+        <!--STYLESHEETS-->
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="css/Validacion.css" rel="stylesheet" type="text/css" />
+        <link href="css/buttons.css" rel="stylesheet" type="text/css" />
 
-<!--SCRIPTS-->
-<script type="text/javascript" src="js/jquery2.min.js"></script>
-<!--Slider-in icons-->
-<script type="text/javascript">
-$(document).ready(function() {
-	$(".username").focus(function() {
-		$(".user-icon").css("left","-48px");
-	});
-	$(".username").blur(function() {
-		$(".user-icon").css("left","0px");
-	});
-	
-	$(".password").focus(function() {
-		$(".pass-icon").css("left","-48px");
-	});
-	$(".password").blur(function() {
-		$(".pass-icon").css("left","0px");
-	});
-});
-</script>
+        <!--SCRIPTS-->
+        <script type="text/javascript" src="js/jquery2.min.js"></script>
+        <!--Slider-in icons-->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".username").focus(function() {
+                    $(".user-icon").css("left", "-48px");
+                });
+                $(".username").blur(function() {
+                    $(".user-icon").css("left", "0px");
+                });
 
-</head>
-<body id="bodylogin">
+                $(".password").focus(function() {
+                    $(".pass-icon").css("left", "-48px");
+                });
+                $(".password").blur(function() {
+                    $(".pass-icon").css("left", "0px");
+                });
+            });
+        </script>
 
-<!--WRAPPER-->
-<div id="wrapper">
+    </head>
+    <body id="bodylogin">
 
-	<!--SLIDE-IN ICONS-->
-    <div class="user-icon"></div>
-    <div class="pass-icon"></div>
-    <!--END SLIDE-IN ICONS-->
-                <?php
-                
-                echo $sesion->iniciarSesion();
-                ?>
-<!--LOGIN FORM-->
-<form name="login-form" class="login-form"  action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+        <!--WRAPPER-->
+        <div id="wrapper">
 
-	<!--HEADER-->
-    <div class="header">
-        <!--TITLE--><h1>Iniciar Sesi&oacute;n</h1><!--END TITLE-->
-<!--    DESCRIPTION<span>Fill out the form below to login to my super awesome imaginary control panel.</span>END DESCRIPTION-->
-    </div>
-    <!--END HEADER-->
-	
-	<!--CONTENT-->
-    <div class="content">
-	<!--USERNAME--><input name="nombre" type="text" class="input username" value="Nombre" id="usuario" onfocus="this.value=''" /><!--END USERNAME-->
-    <!--PASSWORD--><input name="apellido" type="password" class="input password" value="Apellido" id="password" onfocus="this.value=''" /><!--END PASSWORD-->
-    </div>
-    <!--END CONTENT-->
-    
-    <!--FOOTER-->
-    <div class="footer">
-        <input type="hidden" name="login" value="login"/>
-        <!--LOGIN BUTTON--><input type="submit" name="btn_sesion"  id="acceder" value="Iniciar" class="button2" /><!--END LOGIN BUTTON-->
-     <h4>¿Eres Alumno?</h4>
-    <span id="span_registro"><a style="color:darkblue; font-size:110%;" href="registroAlumnos2.php">Registrate aqui!</a></span>
-    </div>
-    <!--END FOOTER-->
+            <!--SLIDE-IN ICONS-->
+            <div class="user-icon"></div>
+            <div class="pass-icon"></div>
+            <!--END SLIDE-IN ICONS-->
+            <!--LOGIN FORM-->
+            <form name="login-form" class="login-form"  action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
 
-</form>
-<!--END LOGIN FORM-->
+                <!--HEADER-->
+                <div class="header">
+                    <!--TITLE--><h1>Iniciar Sesi&oacute;n</h1><!--END TITLE-->
+            <!--    DESCRIPTION<span>Fill out the form below to login to my super awesome imaginary control panel.</span>END DESCRIPTION-->
+                </div>
+                <!--END HEADER-->
 
-</div>
-<!--END WRAPPER-->
+                <!--CONTENT-->
+                <div class="content">
+                    <!--USERNAME--><input name="nombre" type="text" class="input username" value="Nombre" id="usuario" onfocus="this.value = ''" /><!--END USERNAME-->
+                    <!--PASSWORD--><input name="apellido" type="password" class="input password" value="Apellido" id="password" onfocus="this.value = ''" /><!--END PASSWORD-->
+                    <?php
+                    echo $sesion->iniciarSesion();
+                    ?>
+                </div>
+                <!--END CONTENT-->
+                <!--FOOTER-->
+                <div class="footer">
+                    
+                    <input type="hidden" name="login" value="login"/>
+                    <!--LOGIN BUTTON--><input type="submit" name="btn_sesion"  id="acceder" value="Iniciar" class="button2" /><!--END LOGIN BUTTON-->
+                    <h4>¿Eres Alumno?</h4>
+                    <span id="span_registro"><a style="color:darkblue; font-size:110%;" href="registroAlumnos2.php">Registrate aqui!</a></span>
+                </div>
+                <!--END FOOTER-->
 
-<!--GRADIENT--><div class="gradient"></div><!--END GRADIENT-->
+            </form>
+            <!--END LOGIN FORM-->
+        </div>
+        <!--END WRAPPER-->
 
-</body>
+        <!--GRADIENT--><div class="gradient"></div><!--END GRADIENT-->
+
+    </body>
 </html>

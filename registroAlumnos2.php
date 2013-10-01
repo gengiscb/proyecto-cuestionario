@@ -25,7 +25,6 @@ $agregarAlumno = new ControladorAlumno();
         <link href="css/Validacion.css" rel="stylesheet" type="text/css" />
         <!--SCRIPTS-->
         <script type="text/javascript" src="js/jquery.min.js"></script>
-        <!--Slider-in icons-->
         <script type="text/javascript">
 
             $(document).ready(function() {
@@ -44,6 +43,11 @@ $agregarAlumno = new ControladorAlumno();
                 });
             });
         </script>
+        <script type="text/javascript" language="javascript" src="js/scriptaculous/lib/prototype.js"></script>
+        <script type="text/javascript" language="javascript" src="js/scriptaculous/src/scriptaculous.js"></script>
+        <script type="text/javascript" language="javascript" src="js/jsvalidate.js"></script>
+        <!--Slider-in icons-->
+        
 
     </head>
     <body id="bodylogin">
@@ -72,8 +76,8 @@ $agregarAlumno = new ControladorAlumno();
 
                 <!--CONTENT-->
                 <div class="content">
-                    <!--USERNAME--><input name="nombre" type="text" class="input username" value="Nombre" id="nombre" onfocus="this.value = ''" /><!--END USERNAME-->
-                    <!--PASSWORD--><input name="apellido" type="text" class="input password" value="Apellido" id="apellidoP" onfocus="this.value = ''" /><!--END PASSWORD-->
+                    <!--USERNAME--><input name="nombre" type="text" class="input username jsrequired" value="Nombre" id="nombre" onfocus="this.value = ''" /><!--END USERNAME-->
+                    <!--PASSWORD--><input name="apellido" type="text" class="input password jsrequired" value="Apellido" id="apellidoP" onfocus="this.value = ''" /><!--END PASSWORD-->
                 </div>
                 <!--END CONTENT-->
 

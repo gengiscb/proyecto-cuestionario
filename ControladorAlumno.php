@@ -19,7 +19,7 @@ class ControladorAlumno {
                     $msj = "Usuario registrado";
                     header("Location: index.php");
                 } else {
-                    $msj = "Usuario existente o datos inorrectos";
+                    $msj = "El usuario ya existe";
                 }
                 return $msj;
             }
