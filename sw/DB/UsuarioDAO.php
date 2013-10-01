@@ -9,7 +9,7 @@ class UsuarioDAO extends ConexionGeneral{
     public function insertarUsuario($nombre,$apellido,$tipoUsuario){
         $exito = false;
         $conexionDB = $this->abrirConexion();
-        $sql = "INSERT INTO USUARIOS(nombre, apellido, tipoUsuario) VALUES (\"".$nombre.
+        $sql = "INSERT INTO usuarios(nombre, apellido, tipoUsuario) VALUES (\"".$nombre.
                 "\",\"".$apellido."\",".$tipoUsuario.");";
         if($this->ejecutarConsulta($sql, $conexionDB)){
             $exito = true;
@@ -38,7 +38,7 @@ class UsuarioDAO extends ConexionGeneral{
     public function seleccionarUsuarioPorNombre($usuarioNombre) {
         $conexion=$this->abrirConexion();        
         $sql = "SELECT * FROM usuarios WHERE nombre ='" . mysql_real_escape_string($usuarioNombre) . "'";
-//        echo $sql;
+        echo $sql;
         $resultado = $this->ejecutarConsulta($sql, $conexion);
         $usuario=null;
         while ($fila = mysql_fetch_array($resultado)) {
