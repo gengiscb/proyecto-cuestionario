@@ -77,19 +77,19 @@ class ServicioPreguntas {
     public function mostrarPregunta($idPregunta) {
         $preguntasDAO = new PreguntasDAO();
         $resultado = $preguntasDAO->obtenerPregunta($idPregunta);
-        $resultadoHTML = "" + $idPregunta;
+        $resultadoHTML = "";
         if ($resultado != 0) {
             $respuestas = $preguntasDAO->obtenerRespuestas($idPregunta);
-            $resultadoHTML.="<form action='" . $_SERVER["PHP_SELF"] . "' method='post'><table width='40%'><tr><td colspan='4' align='center'>" . $resultado['materia'] . " Unidad " . $resultado['unidad'] . "</td></tr><tr><td colspan='4' align='center'><img src='Imagen.php?id=".$idPregunta."' width='300px' height='300px'></img></td></tr>";
-            $resultadoHTML.="<input type='hidden' name='idPregunta' value='" . $idPregunta . "' />";
-            $resultadoHTML.="<tr><td colspan='4' align='justify'> " . $resultado['descripcion'] . "</td></tr>";
+            $resultadoHTML.="<form action='" . $_SERVER["PHP_SELF"] . "' method='post'><table width='40%'><tr><th id=titulo colspan='4' align='center'>" . $resultado['materia'] . " Unidad " . $resultado['unidad'] . "</th></tr><tr><td colspan='4' align='center'><img src='Imagen.php?id=".$idPregunta."' width='300px' height='300px'></img></td></tr>";
+            $resultadoHTML.="<input type='hidden' id=pregunta name='idPregunta' value='" . $idPregunta . "' />";
+            $resultadoHTML.="<tr><td id=instrucciones colspan='4' align='justify'> " . $resultado['descripcion'] . "</td></tr>";
             $resultadoHTML.="<tr><td colspan='4' align='center'>" . $resultado['pregunta'] . "</td></tr>";
             $i=0;
             foreach ($respuestas as $respuesta) {
                 $resultadoHTML.="
                    <tr>
                      <td colspan='4' align='left' >
-                           <input id='resp$i'type='radio' name='respuesta' value='$respuesta' onchange='habilitarSiguiente(this.form)'> 
+                           <input id='resp$i'type='radio'id=respuesta name='respuesta' value='$respuesta' onchange='habilitarSiguiente(this.form)'> 
                           <label for='resp$i' > $respuesta </label>
                      </td>
                   </tr>";
