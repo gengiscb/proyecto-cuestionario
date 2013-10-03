@@ -79,7 +79,7 @@ $sesion->sesionActiva();
                     <input type="hidden" name="login" value="login"/>
                     <!--LOGIN BUTTON--><input type="submit" name="btn_sesion"  id="acceder" value="Iniciar" class="button2" /><!--END LOGIN BUTTON-->
                     <h4>¿Eres Alumno?</h4>
-                    <span id="span_registro"><a style="color:darkblue; font-size:110%;" href="registroAlumnos2.php">Registrate aqui!</a></span>
+                    <span id="span_registro"><a style="color:darkblue; font-size:110%;" href="registroAlumnos.php">Registrate aqui!</a></span>
                 </div>
                 <!--END FOOTER-->
 

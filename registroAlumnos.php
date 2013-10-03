@@ -1,56 +1,101 @@
 <?php
 include_once 'config.inc.php';
-include_once 'sw/DB/ConexionGeneral.php';
+include_once 'sw/Sesion.php';
 include_once 'ControladorAlumno.php';
 
-$agregarAlumno= new ControladorAlumno();
-$agregarAlumno->agregarAlumno();
+$agregarAlumno = new ControladorAlumno();
 ?>
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
     <head>
-        <title></title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8/Unicode">
-        <link href="css/Estilos.css" rel="stylesheet" type="text/css" />
-        <link href="css/jqtransform.css" rel="stylesheet" type="text/css" >
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/jquery.jqtransform.js"></script> 
-    </head>
-    <body>
 
-        <div class="contenido">
-            <div class="marco_registro">            
-                <fieldset class="registro">
-                    <h1>Registro Alumno</h1>
-                    <!--                    include_php/_gestion_login.php-->
-                    <form class="reg_alum" method="get" id="form_reg_alum" action="<?php echo $_SERVER["PHP_SELF"]; ?>" >
-                        <div class="rowElem">
-                            <label for="nombre"> Nombre:</label>                          	  
-                            <input class="text" type="text" name="nombre" id="nombre" value="" />
-                        </div>
-                        <div class="rowElem">
-                            <label  for="apellido"> Apellido:</label>   
-                            <input class="text" type="text" name="apellido" id="apellido" value="" />
-                        </div>
-                        
-                        <div class="rowElem">
-                            <input type="hidden" name="registrar_alumno" value="registrar"/>
-                            <input type="submit"  name="btn_registrar" class="boton"  id="registrar" value="Registrar"/>
-                            <input type="button" onclick="document.location = 'index.php';"  name="btn_regresar" class="boton"  id="regresar" value="Regresar"/>
-                        </div>
-                    </form>
-                    <script type="text/javascript">
-                            $(function() {
-                                //find all form with class jqtransform and apply the plugin
-                                $("form.reg_alum").jqTransform();
-                            });
-                    </script>
-                </fieldset>
-            </div>
+        <!--------------------
+        LOGIN FORM
+        by: Amit Jakhu
+        www.amitjakhu.com
+        --------------------->
+
+        <!--META-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Registro Alumnos</title>
+
+        <!--STYLESHEETS-->
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="css/buttons.css" rel="stylesheet" type="text/css" />
+        <link href="css/Validacion.css" rel="stylesheet" type="text/css" />
+        <!--SCRIPTS-->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript">
+
+            $(document).ready(function() {
+                $(".username").focus(function() {
+                    $(".user-icon").css("left", "-48px");
+                });
+                $(".username").blur(function() {
+                    $(".user-icon").css("left", "0px");
+                });
+
+                $(".password").focus(function() {
+                    $(".pass-icon").css("left", "-48px");
+                });
+                $(".password").blur(function() {
+                    $(".pass-icon").css("left", "0px");
+                });
+            });
+        </script>
+        <script type="text/javascript" language="javascript" src="js/scriptaculous/lib/prototype.js"></script>
+        <script type="text/javascript" language="javascript" src="js/scriptaculous/src/scriptaculous.js"></script>
+        <script type="text/javascript" language="javascript" src="js/jsvalidate.js"></script>
+        <!--Slider-in icons-->
+        
+
+    </head>
+    <body id="bodylogin">
+
+        <!--WRAPPER-->
+        <div id="wrapper">
+
+            <!--SLIDE-IN ICONS-->
+            <div class="user-icon"></div>
+            <div class="pass-icon"></div>
+            <!--END SLIDE-IN ICONS-->
+            <?php
+            $sesion = new Sesion();
+            echo $sesion->iniciarSesion();
+            echo $agregarAlumno->agregarAlumno();
+            ?>
+            <!--LOGIN FORM-->
+            <form name="login-form" class="login-form"  action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="get">
+
+                <!--HEADER-->
+                <div class="header">
+                    <!--TITLE--><h1>Registro Alumnos</h1><!--END TITLE-->
+            <!--    DESCRIPTION<span>Fill out the form below to login to my super awesome imaginary control panel.</span>END DESCRIPTION-->
+                </div>
+                <!--END HEADER-->
+
+                <!--CONTENT-->
+                <div class="content">
+                    <!--USERNAME--><input name="nombre" type="text" class="input username jsrequired" value="Nombre" id="nombre" onfocus="this.value = ''" /><!--END USERNAME-->
+                    <!--PASSWORD--><input name="apellido" type="text" class="input password jsrequired" value="Apellido" id="apellidoP" onfocus="this.value = ''" /><!--END PASSWORD-->
+                </div>
+                <!--END CONTENT-->
+
+                <!--FOOTER-->
+                <div class="footer">
+                    <input type="hidden" name="registrar_alumno" value="registrar"/>
+                    <!--LOGIN BUTTON--><input type="submit" name="btn_registrar"  id="acceder" value="Registrar" class="button2 registrar" /><!--END LOGIN BUTTON-->
+                    <input type="button" class="button2 regresar" onclick="document.location = 'index.php';"  name="btn_regresar" class="boton" value="Regresar"/>
+                </div>
+                <!--END FOOTER-->
+
+            </form>
+            <!--END LOGIN FORM-->
+
         </div>
+        <!--END WRAPPER-->
+
+        <!--GRADIENT--><div class="gradient"></div><!--END GRADIENT-->
+
     </body>
 </html>
