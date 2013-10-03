@@ -68,6 +68,12 @@ if (isset($_SESSION['encurso'])) {
                                     <input class="botonMenu" type="submit" name="resultados" value="Resultados"></input>
                                 </div
                             </td>
+                            
+                            <td>
+                                <div class="contenedorBoton">
+                                    <input class="botonMenu" type="submit" name="resultados" value="Competencia"></input>
+                                </div
+                            </td>
                         </tr>
                 </table>
             </form>
