@@ -27,6 +27,7 @@ if(isset($_SESSION['encurso'])){
         <link href="css/Estilos.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="css/font-awesome.min.css"></link>
         <link rel="stylesheet" href="css/buttons.css"></link>
+        <link rel="stylesheet" href="css/style.css"></link>
         <title>Cuestionario Alumno</title>
     </head>
 
@@ -45,7 +46,7 @@ if(isset($_SESSION['encurso'])){
         <div>
             <?php
             if ($_SESSION['tipo'] == 1) {
-                echo "<a href='principal_profesor.php' class='menuProfesor'> Menu Profesores </a>";
+                echo "<a href='principal_profesor.php' class='button3' name='btn_regresar'> Menu Profesores </a>";
             }
             ?>
         </div>
