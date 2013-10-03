@@ -48,7 +48,7 @@ $controladorPregunta->cargarSiguiente();
                 if (count($preguntas) <= $_SESSION['numPregunta']) {
                     echo '<div class= "preguntas">No hay mas preguntas</div>';
                     echo '<div><form action="principal_alumno.php" method="post">
-                <input type="submit" onclick="javascript:alert(\'' . $controladorPregunta->calificacion() . '\');" class="button button-pill button-primary button-finalizar" name="finalizar" value="Finalizar" />        
+                <input type="submit" onclick="javascript:alert(\'' . $controladorPregunta->calificacion() . '\');" class="button button-pill button-primary button-finalizar2" name="finalizar" value="Finalizar" />        
             </form><div>';
                     $_SESSION['encurso'] = false;
                 } else {

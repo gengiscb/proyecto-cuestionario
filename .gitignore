@@ -215,3 +215,5 @@ pip-log.txt
 .mr.developer.cfg
 
 config.in.php
+
+config.inc.php

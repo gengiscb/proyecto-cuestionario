@@ -16,20 +16,22 @@ $sesion->cerrarSesion();
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8/unicode">
-        <link rel="stylesheet" href="css/font-awesome.min.css"></link>
-        <link rel="stylesheet" href="css/buttons.css"></link>
+       
+           <link rel="stylesheet" href="css/buttons.css"></link>
         <link rel="stylesheet" href="css/Estilos.css"></link>
         <link rel="stylesheet" href="css/style.css"></link>
         <title>Resultados</title>
     </head>
     <body>
-        <div align="right">
+        <div align="center">
             <?php echo $gestorPlantilla->formCerrarSesion() ?>
         </div>
-        <div>
+        
+        <div align="center" id="stylized" class="myform">
 
             <?php
-            echo "<p> Promedio de aprobados: " .  $controladorVista->verPromedioAbrobados()."
+            echo "
+                <p> Promedio de aprobados: " .  $controladorVista->verPromedioAbrobados()."
                 </p><p>Promedio general: ". $controladorVista->verPromedioGeneral() . "</p>";
             ?>
         </div>
