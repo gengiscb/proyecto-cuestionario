@@ -56,6 +56,8 @@ $controladorPregunta->cargarSiguiente();
                 }
             } else {
                 echo '<div class= "preguntas">No hay pregunta activas</div>';
+                 $_SESSION['encurso'] = false;
+                echo "<a class='button3' name='btn_regresar' href='principal_alumno.php'> Regresar a principal </a>";
             }
             ?>
         </div>
