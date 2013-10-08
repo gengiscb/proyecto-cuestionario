@@ -1,7 +1,7 @@
 <?php
 
-include_once 'sw/DB/ConexionGeneral.php';
-include_once 'sw/domain/Usuario.php';
+include_once 'funciones/DB/ConexionGeneral.php';
+include_once 'funciones/domain/Usuario.php';
 
 /**
  * Description of AlumnoDAO

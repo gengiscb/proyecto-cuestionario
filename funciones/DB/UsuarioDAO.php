@@ -1,6 +1,6 @@
 <?php
 include_once 'ConexionGeneral.php';
-include_once 'sw/domain/Usuario.php';
+include_once 'funciones/domain/Usuario.php';
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.

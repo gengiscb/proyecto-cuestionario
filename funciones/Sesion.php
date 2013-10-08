@@ -1,7 +1,7 @@
 <? ob_start(); ?>
 <?php
 
-include_once 'sw/DB/UsuarioDAO.php';
+include_once 'funciones/DB/UsuarioDAO.php';
 include_once 'domain/Usuario.php';
 /*
  * To change this template, choose Tools | Templates

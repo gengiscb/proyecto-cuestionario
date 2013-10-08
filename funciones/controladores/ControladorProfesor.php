@@ -1,5 +1,5 @@
 <?php
-include_once 'sw/ServicioProfesor.php';
+include_once 'funciones/servicios/ServicioProfesor.php';
 
 class ControladorProfesor{
     

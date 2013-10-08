@@ -26,7 +26,7 @@ class ControladorVistaProfesor {
     }
 
     function iniciarClase() {
-        include_once 'ServicioPreguntas.php';
+        include_once 'funciones/servicios/ServicioPreguntas.php';
         if (isset($_POST['iniciarClase'])) {
             $_SESSION['encurso']=true;
             $servicioPreguntas = new ServicioPreguntas();
@@ -48,15 +48,15 @@ class ControladorVistaProfesor {
     }
     
     function verPromedioAbrobados(){
-        include_once 'ServicioAlumno.php';
-        include_once 'DB/AlumnoDAO.php';
+        include_once 'funciones/servicios/ServicioAlumno.php';
+        include_once 'funciones/DB/AlumnoDAO.php';
         $servicioAlumno = new ServicioAlumno();
         return $servicioAlumno->obtenerPromedioAprobados();
     }
     
     function verPromedioGeneral(){
-        include_once 'ServicioAlumno.php';
-        include_once 'DB/AlumnoDAO.php';
+        include_once 'funciones/servicios/ServicioAlumno.php';
+        include_once 'funciones/DB/AlumnoDAO.php';
         $servicioAlumno = new ServicioAlumno();
         return $servicioAlumno->obtenerPromedioGeneral();
     }

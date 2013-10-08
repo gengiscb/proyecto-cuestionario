@@ -1,7 +1,7 @@
 <?php
 
-include_once 'DB/PreguntasDAO.php';
-include_once 'DB/AlumnoDAO.php';
+include_once 'funciones/DB/PreguntasDAO.php';
+include_once 'funciones/DB/AlumnoDAO.php';
 
 class ServicioPreguntas {
 

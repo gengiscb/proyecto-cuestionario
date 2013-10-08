@@ -1,7 +1,7 @@
 <?php
 include_once 'config.inc.php';
-include_once 'sw/Sesion.php';
-include_once 'ControladorAlumno.php';
+include_once 'funciones/Sesion.php';
+include_once 'funciones/controladores/ControladorAlumno.php';
 
 $agregarAlumno = new ControladorAlumno();
 ?>

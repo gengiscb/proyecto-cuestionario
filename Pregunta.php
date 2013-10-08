@@ -1,20 +1,15 @@
 <?php
 include_once 'config.inc.php';
-include_once 'ControladorPreguntas.php';
-include_once 'sw/Sesion.php';
-include_once 'GestorPlantilla.php';
-;
+include_once 'funciones/controladores/ControladorPreguntas.php';
+include_once 'funciones/Sesion.php';
 
 $sesion = new Sesion();
 $controladorPregunta = new ControladorPreguntas();
-$gestorPlantilla = new GestorPlantilla();
-
 $sesion->filtroSesion();
 $sesion->cerrarSesion();
 $preguntas = $controladorPregunta->obtenerIdPreguntasActivas();
 $controladorPregunta->cargarSiguiente();
-//$controladorPregunta->finalizarCuestionario();
-//$idPreguntas = $contoladorPregunta->obtenerIdPreguntasActivas();
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -26,7 +21,7 @@ $controladorPregunta->cargarSiguiente();
         <link rel="stylesheet" href="css/buttons.css"></link>
         <link rel="stylesheet" href="css/Estilos.css"></link>
         <link rel="stylesheet" href="css/style.css"></link>
-        <!--<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>-->
+        <script src="js/jquery.js"></script>
         <script type="text/javascript" src="js/buttons.js"></script>
 
         <title>Cuestionario Alumno</title>

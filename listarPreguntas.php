@@ -1,9 +1,9 @@
 <? ob_start(); ?>
 <?php
 include_once 'config.inc.php';
-include_once 'ControladorPreguntas.php';
-include_once 'GestorPlantilla.php';
-include_once 'sw/Sesion.php';
+include_once 'funciones/controladores/ControladorPreguntas.php';
+include_once 'funciones/GestorPlantilla.php';
+include_once 'funciones/Sesion.php';
 
 $gestorPlantilla = new GestorPlantilla();
 $gestorPlantilla->regresarPagina();

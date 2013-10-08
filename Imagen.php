@@ -1,6 +1,6 @@
 <?php
 include_once 'config.inc.php';
-include_once 'ControladorPreguntas.php';
+include_once 'funciones/controladores/ControladorPreguntas.php';
 $controladorPregunta = new ControladorPreguntas();
 //header('Content-type: image/jpg');
 $image = $controladorPregunta->mostrarImagen($_GET['id']);

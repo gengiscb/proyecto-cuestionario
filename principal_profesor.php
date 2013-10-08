@@ -1,7 +1,7 @@
 <?php
-include_once 'sw/ControladorVistaProfesor.php';
-include_once 'sw/Sesion.php';
-include_once 'GestorPlantilla.php';
+include_once 'funciones/controladores/ControladorVistaProfesor.php';
+include_once 'funciones/Sesion.php';
+include_once 'funciones/GestorPlantilla.php';
 
 $sesion = new Sesion();
 $gestorPlantilla = new GestorPlantilla();

@@ -230,7 +230,7 @@ body{
     text-align: center;
     color: #cc0000; 
     font-size: 35px;
-    margin-top: 150px;
+    /*margin-top: 150px;*/
     font-weight:  bold;
 }
 
@@ -308,7 +308,7 @@ h1{
 }
 
 #activos{
-    padding-top: 100px;
+    /*padding-top: 100px;*/
     width: 800px;
     text-align: left;
     margin-left:  auto;

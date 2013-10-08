@@ -1,6 +1,6 @@
 <?php
 
-include_once 'sw/ServicioAlumno.php';
+include_once 'funciones/servicios/ServicioAlumno.php';
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.

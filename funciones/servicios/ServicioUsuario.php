@@ -1,5 +1,5 @@
 <?php
-include_once 'DB/UsuarioDAO.php';
+include_once 'funciones/DB/UsuarioDAO.php';
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.

@@ -1,6 +1,6 @@
 <?php
 include_once 'config.inc.php';
-include_once 'sw/Sesion.php';
+include_once 'funciones/Sesion.php';
 $sesion = new Sesion();
 $sesion->sesionActiva();
 ?>
